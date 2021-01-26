@@ -1,0 +1,30 @@
+#app-bar {
+    border-bottom: 3px solid #FFFFFF;
+}
+
+
+#Links {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 800;
+    font-size: 1.3rem;
+    border: none;
+    width: 19vw;
+    background: none;
+    color: white;
+    display: flex;
+    flex-direction: inherit;
+    align-items: center;
+    justify-content: center;
+    margin-left: -1.2em;
+    text-decoration: none;
+}
+
+#photo {
+    height: 90px;
+    width: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-left: unset;
+}
