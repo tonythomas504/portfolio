@@ -1,23 +1,34 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import { AppBar, Button, Toolbar, Container } from '@material-ui/core'
-import './Navbar.css'
-import ttLogos from '../Photos/SkillsPhotos/ttLogos.png'
+import { Layout, Header, Navigation, Drawer, Content, Button } from 'react-mdl'
 
 export default class Navbar extends Component {
     render() {
         return (
-            <div class="navbar">
-                <AppBar id="app-bar" position="static" style={{ background: "#000000" }}>
-                    <Toolbar>
-                        <Link style={{ textDecoration: 'none' }} to="/"><Button id="Links">Home</Button></Link>
-                        <Link style={{ textDecoration: 'none' }} to="/about me"><Button id="Links">About Me</Button></Link>
-                        <Link style={{ textDecoration: 'none' }} to="/skills"><Button id="Links">Skills</Button></Link>
-                        <Link style={{ textDecoration: 'none' }} to="/portfolio"><Button id="Links">Portfolio</Button></Link>
-                        <Link style={{ textDecoration: 'none' }} to="/contact"><Button id="Links">Contact</Button></Link>
-                        <img id="photo" src={ttLogos} alt="Tony Thomas initials" />
-                    </Toolbar>
-                </AppBar>
+            <div className="demo-big-content">
+                <Layout>
+                    <Header className="header-color" title="Title" scroll>
+                        <Navigation>
+                            <Link style={{ textDecoration: 'none' }} to="/">Home</Link>
+                            <Link style={{ textDecoration: 'none' }} to="/about me">About Me</Link>
+                            <Link style={{ textDecoration: 'none' }} to="/resume">Resume</Link>
+                            <Link style={{ textDecoration: 'none' }} to="/portfolio">Portfolio</Link>
+                            <Link style={{ textDecoration: 'none' }} to="/contact">Contact</Link>
+                        </Navigation>
+                    </Header>
+                    <Drawer title="Title">
+                        <Navigation>
+                            <Link style={{ textDecoration: 'none' }} to="/">Home</Link>
+                            <Link style={{ textDecoration: 'none' }} to="/about me">About Me</Link>
+                            <Link style={{ textDecoration: 'none' }} to="/resume">Resume</Link>
+                            <Link style={{ textDecoration: 'none' }} to="/portfolio">Portfolio</Link>
+                            <Link style={{ textDecoration: 'none' }} to="/contact">Contact</Link>
+                        </Navigation>
+                    </Drawer>
+                    <Content>
+                        <div className="page-content" />
+                    </Content>
+                </Layout>
             </div>
         )
     }
