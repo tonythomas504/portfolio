@@ -5,7 +5,6 @@ import Home from './Components/Home/Home'
 import AboutMe from './Components/AboutMe/aboutMe'
 import Portfolio from './Components/Portfolio/Portfolio'
 import Contact from './Components/Contact/Contact'
-import Resume from './Components/Skills/Resume'
 import { Link } from 'react-router-dom'
 import Navbar from './Components/Navbar/Navbar'
 import Routes from './Components/Routes/Routes'
@@ -23,7 +22,6 @@ function App() {
           <Route exact path="/about me"><AboutMe /></Route>
           <Route exact path="/portfolio"><Portfolio /></Route>
           <Route exact path="/contact"><Contact /></Route>
-          <Route exact path="/resume"><Resume /></Route>
 
         </Switch>
       </div>
